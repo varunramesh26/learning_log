@@ -135,5 +135,11 @@ LOGIN_URL = 'users:login'
 import django_heroku
 django_heroku.settings(locals())
 
+if os.environ.get('DEBUG') == 'TRUE':
+    DEBUG = True
+elseif os.environ.get('DEBUG') == 'FALSE':
+    DEBUG = False
+
+
 # DATABASE FOR PYSCOPG2
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
