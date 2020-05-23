@@ -25,9 +25,10 @@ urlpatterns = [
     path('', include(('learning_logs.urls', 'learning_logs'), namespace='learning_logs')),
 ]
 
-DATABASE_URL = os.environ['DATABASE_URL']
+# For Psycopg2 configuration
+# DATABASE_URL = os.environ['DATABASE_URL']
 
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+# conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 # app_name = 'learning_logs'
 
